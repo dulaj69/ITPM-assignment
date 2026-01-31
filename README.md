@@ -7,6 +7,7 @@ Testing Framework = Playwright
 Language = TypeScript
 Test Type = End-to-End UI Automation
 Target Application = SwiftTranslator (Singlish → Sinhala)
+
 Step 1 - (check whether the following are installed on your machine)
 
 Node.js (v16 or later recommended)
@@ -18,15 +19,23 @@ Git
 node -v
 npm -v
 git --version
+
+
 Step 2- Install Dependencies ( Install all required dependencies using npm)
 
 npm install
+
+
 Step 3 - Install Playwright Browsers (Before running the tests for the first time, install Playwright browsers)
 
 npx playwright install
+
+
 Step 4 - Run the Tests (To execute all Playwright tests)
 
 npx playwright test
+
+
 Step 5 - View HTML Test Report (After running tests, generate and view the Playwright HTML report)
 
 npx playwright show-report
@@ -46,6 +55,7 @@ How to Clone the Project
 Step 1-
 
 git clone https://github.com/dulaj69/ITPM-assignment.git
+
 Step 2-
 
 Navigate into the project directory:
