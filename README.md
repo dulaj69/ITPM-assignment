@@ -1,63 +1,37 @@
-SinglishToSinhalaTranslator
-This repository contains automated end-to-end tests written using Playwright to test the Singlish to Sinhala translation functionality available on https://www.swifttranslator.com/.
+# ITPM Assignment 1 - Test Automation
 
-The project includes positive, negative test cases to validate that the application works correctly and handles invalid inputs.
+This repository contains the test automation suite for the Singlish to Sinhala chat translator application (Pixelssuite). The tests are written using Python and Playwright.
 
-Testing Framework = Playwright
-Language = TypeScript
-Test Type = End-to-End UI Automation
-Target Application = SwiftTranslator (Singlish → Sinhala)
+## Prerequisites
+- Python 3.11 or higher
+- Google Chrome installed (or Chromium)
 
-Step 1 - (check whether the following are installed on your machine)
+## Installation
 
-Node.js (v16 or later recommended)
-npm (comes with Node.js)
-Git
-(Check versions using)
+1. Navigate to the project folder:
+   ```bash
+   cd IT23183940
+   ```
+2. Install the required Python dependencies:
+   ```bash
+   pip install playwright openpyxl
+   ```
+3. Install Playwright browsers:
+   ```bash
+   playwright install
+   ```
 
+## Running the Tests
 
-node -v
-npm -v
-git --version
+To run the automated tests and populate the Excel file with actual outputs:
 
+```bash
+python IT23183940_test_automation.py --excel "IT23183940_Assignment 1 - Test cases.xlsx" --url "https://www.pixelssuite.com/chat-translator" --wait-ms 5000 --type-delay-ms 80 --slow-mo-ms 200 --save-every 1 --keep-open
+```
 
-Step 2- Install Dependencies ( Install all required dependencies using npm)
+The script will launch a browser, type the Singlish inputs from the provided Excel file, capture the Sinhala transliterations from the chat interface, and update the "Actual output" and "Status" columns dynamically.
 
-npm install
-
-
-Step 3 - Install Playwright Browsers (Before running the tests for the first time, install Playwright browsers)
-
-npx playwright install
-
-
-Step 4 - Run the Tests (To execute all Playwright tests)
-
-npx playwright test
-
-
-Step 5 - View HTML Test Report (After running tests, generate and view the Playwright HTML report)
-
-npx playwright show-report
-This will open the report in your default browser.
-Test Coverage
-The test suite includes:
-
-Positive Test Cases – Valid Singlish inputs
-Negative Test Cases – Empty, invalid, and unexpected inputs
-These tests ensure the correctness, robustness, and stability of the translation feature.
-
-
-
-Tests are written for academic and demonstration purposes.
-How to Clone the Project
-
-Step 1-
-
-git clone https://github.com/dulaj69/ITPM-assignment.git
-
-Step 2-
-
-Navigate into the project directory:
-
-cd ITPM-assignment
+## Files included:
+- `IT23183940_Assignment 1 - Test cases.xlsx`: The Excel file containing the 50 test cases.
+- `IT23183940_test_automation.py`: The Playwright automation script.
+- `IT23183940_Git Repo Link.txt`: Text file containing the Git repository link.
